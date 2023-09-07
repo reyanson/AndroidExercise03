@@ -5,17 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class LastActivity extends AppCompatActivity {
-    EditText name ,city;
+    TextView name ,city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last);
 
-        name = (EditText) findViewById(R.id.nameText);
-        city = (EditText) findViewById(R.id.cityText);
+        name = (TextView) findViewById(R.id.nameText);
+        city = (TextView) findViewById(R.id.cityText);
 
         SharedPreferences data3 = getSharedPreferences("data",MODE_PRIVATE);
         String Name = data3.getString("NAME","Name not stored");

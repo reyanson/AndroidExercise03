@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class SignupActivity extends AppCompatActivity {
     EditText name,city,username,password;
-    Button signup,back;
+    Button signupbtn,back;
 
     Intent intent;
 
@@ -27,11 +27,11 @@ public class SignupActivity extends AppCompatActivity {
         city =(EditText) findViewById(R.id.cityEditText);
         username = (EditText) findViewById(R.id.usernameEditText);
         password = (EditText) findViewById(R.id.passwordEditText);
-        signup = (Button) findViewById(R.id.signUpButton);
+        signupbtn = (Button) findViewById(R.id.signupButton);
         back = (Button) findViewById(R.id.backButton);
         intent = new Intent(this,MainActivity.class);
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signupbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences data1 = getSharedPreferences("data",MODE_PRIVATE);
@@ -51,5 +51,7 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
